@@ -1,0 +1,904 @@
+:root{
+  --primaryColor:#1877f2;
+  --successColor:#04dd04;
+}
+/* 54:46  
+01:07:45
+*/
+input,
+input:focus,
+textarea,
+textarea:focus,
+button,
+button:focus{
+  border: none;
+  outline: none;
+}
+a,
+a:focus,
+a:hover{
+text-decoration: none !important;
+}
+
+/* header  */
+.topbarContainer{
+  width: 100%;
+  height: 50px;
+  display: flex;align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--primaryColor);
+  z-index: 9999;
+  padding-left: 20px;
+}
+.topbarLeft{
+  flex:4;
+}
+.logo{
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.topbarCenter{
+  flex:4;
+}
+.searchbar{
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.searchbar .fa-search{
+  font-size: 18px !important;
+  
+}
+.searchInput{
+  margin-right: 8px;
+  border: none;
+  width: calc(100% - 20px);
+}
+.searchInput:focus{
+  outline: none;
+}
+.topbarRight{
+  flex:4;
+  display: flex;
+  align-items: center;justify-content: space-around;
+  color: white;
+}
+.topbarlink{
+  margin-right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.topbarIcons{
+  display: flex;
+  align-items: center;
+}
+.topbarIconItem{
+  margin-right: 15px;
+  position: relative;
+  cursor: pointer;
+}
+.rightbarController{
+  display: none;
+}
+.rightbarController .topIconBage{
+  border: 2px solid white;
+}
+.topIconBage{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+  top: -7px;
+  right: -7px;
+}
+.myprofilpic{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+} 
+/* !header  */
+/* homeContainer */
+.homeContainer{
+  display: flex;
+  width: 100%;
+} 
+/* sidebar  */
+.sidebar{
+  flex: 3;
+  height: calc(100vh - 50px);
+  overflow: hidden;
+  overflow-y: scroll;
+  position: sticky;
+  top: 50px;
+  z-index: 10;
+} 
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: black;
+  border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgba(0, 0, 0, 0.377);
+  border:1px solid black;
+  border-radius: 25px;
+}
+.sidebarWrapper{
+  padding: 20px;
+}
+ul{
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+.sidebarListItem{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.sidebarListItem i{
+  margin-right: 20px;
+  font-size: 18px;
+}
+.sidebarBtn{
+  width: 150px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.sidebarHr{
+  margin: 20px 0;
+}
+
+.sidebarFriendList .sidebarFriend{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.sidebarFriend img{
+  margin-right: 10px;
+}
+/* !sidebar  */
+/* feed  */
+.feed{
+  flex: 5.5;
+  }
+  .feedWrapper{
+    padding: 20px;
+  }
+  /* share */
+  .share{
+    width: 100%;
+    /* height: 170px; */
+    border-radius: 10px;
+    box-shadow: 0 0 16px -8px rgba(0, 0, 0, 0.68);
+  }
+  .shareWrapper{
+    padding: 10px;
+  }
+  .shareTop{
+    display: flex;
+    align-items: center;
+  }
+  .shareWrapper .myprofilpic{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+
+  }
+  .shareImgContainer{
+    padding: 0 20px 10px 20px;
+    position: relative;
+  }
+  .shareImg{
+    width: 100%;
+    object-fit: cover;
+  }
+  .shareImgContainer i{
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    opacity: .8;
+    transition: all .3s ease-out;
+
+  } .shareImgContainer i:hover{
+    opacity: 1;
+  }
+  .shareForm{
+    width: 100%;
+  }
+  .shareInput{
+    width: calc(100% - 20px);
+  }
+  .shareHr{
+    margin: 20px;
+  }
+  .shareBottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .shareOptions{
+    display: flex;
+    margin-left: 20px;
+  }
+  .shareOption{
+    display: flex;
+    align-content: center;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  .optionTxt{
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .shareIcon{
+    font-size: 16px;
+    margin-right: 6px;
+  }
+  .shareBtn{
+    padding: 7px;
+    border-radius: 5px;
+    background-color: var(--primaryColor);
+    font-weight: 600;
+    color: white;
+    margin-right: 20px;
+  }
+  /* !share  */
+  /* post */
+  /* nopost */
+  /* edit post  */
+  
+  .editPost{
+    border-bottom: 1px solid #555;
+    width: 100%;
+    padding-bottom: 5px;
+    margin-top: 20px;
+  }
+  .editPost:focus{
+    border-bottom: 1px solid #555;
+  }
+  .editPostContainer .btns{
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .editPostContainer .btns button{
+    margin:0 10px ;
+    padding: 5px;
+    color: white;
+    border-radius: 8px;
+    width: 90px;
+    height: 45px;
+    background-color: #777;
+    font-weight: 600;
+  }
+  .noPost{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  
+  .noPostText{
+font-size: 30px;
+font-weight: bold;
+color: #333;
+  }
+  .noPostIcon{
+    font-size: 50px;
+    color: var(--primaryColor);
+  }
+  /* !nopost */
+  .post{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 16px -8px rgba(0, 0, 0, 0.68);
+    margin: 30px 0;
+  }
+  .postWrapper{
+    padding: 10px;
+  }
+  .postTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .postTopLeft{
+    display: flex;
+    align-items: center;
+  }
+  .postName{
+    font-size: 15px;
+    margin-right: 10px;
+    text-transform: capitalize;
+  }
+  .postDate{
+    font-size: 12px;
+    color: #333;
+  }
+  .postTopRight{
+    position: relative;
+  }
+  .postTopRightOptions{
+    position: absolute;
+    background-color: white;
+    border: 1.5px solid var(--primaryColor);
+    padding:5px;
+    top: 0;
+    right: 13px;
+    border-radius: 10px 0 10px 10px;
+
+  }
+  .postTopRightOptions .optionItem{
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: #333;
+    transition: all .3s ease-out;
+  }
+  .postTopRightOptions .optionItem:hover{
+    background-color: var(--primaryColor);
+    color: white;
+  }
+  .postTopRightOptions .optionItem .optionText{
+    font-weight: bold;
+    
+  }.postTopRightOptions .optionItem:hover i{
+    background-color: white;
+  }
+  .postTopRightOptions .optionItem i{
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: all .3s ease-out;
+  }
+  .dots{
+    cursor: pointer;
+  }
+  .dots .dot{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-bottom: 3px;
+    max-height: 500px;
+    object-fit: contain;
+    pointer-events: none;
+  }
+.postCenter{
+  margin: 20px 0;
+}
+.postImg{
+  margin-top: 20px;
+  width: 100%;
+}
+.postBottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.postBottomLeft{
+  display: flex;
+  align-items: center;
+}
+.postBottomLeft i{
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  padding-left: 1px;
+  padding-top: 1px;
+  background-color: gray;
+  cursor: pointer;
+}
+.likeCounter,
+.postCommentText{
+font-size: 15px;
+cursor: pointer;
+} 
+.postCommentText{
+  cursor: pointer;
+}
+  /* !post */
+/* !feed  */
+.rightbar{
+  flex: 3.5;
+  z-index: 11;
+}
+.rightbarWrapper{
+  padding: 20px 20px 0 0;
+}
+.birthdayContainer{
+  display: flex;
+}
+.birthdayText{
+  width: 80%;
+  font-weight: 300;
+}
+.iconGift{
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: red;
+  margin-right: 10px;
+}
+.rightbarAd{
+  width: 100%;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+.rightbarTitle{
+  margin-bottom: 10px;
+}
+.friendList .friend{
+display: flex;
+align-items: center;
+margin-bottom: 15px;
+}
+.rightbarWrapper .myprofilpic{
+  width: 40px;
+  height: 40px;
+}
+.imgContainer{
+  position: relative;
+}
+.rightbarOnline{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: limegreen;
+  position: absolute;
+  top:0;
+  right: 8px;
+  border: 2px solid white;
+} 
+/* profile */
+.profile{
+  display: flex;
+  width: 100%;
+}
+.profileRight{
+  flex:9;
+}
+.profileCover{
+  height: 320px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.profileCoverImg{
+width: 100%;
+height: 250px;
+object-fit: cover;
+box-shadow: 0px 0px 5px black;
+}
+.profileCover .myprofilpic{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  margin: 0;
+  top:50%;
+  border: 3px solid white;
+}
+.profileInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.profileInfo .name{
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.profileInfo .desc{
+  font-weight: 100 !important;
+  text-transform: capitalize;
+}
+.profileRightBottom{
+  display: flex;
+}
+/* profileRightbar */
+.rightbarGallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.rightbarInfo{
+  margin-bottom: 30px;
+}
+.rightbarInfoItem{
+  margin-bottom: 10px;
+}
+.rightbarInfoKey{
+  font-weight: 600;
+  margin-right: 15px;
+  color: #555;
+  text-transform: capitalize;
+} 
+.rightbarInfoValue{
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.rightbarGallery .image{
+width: 100px;
+height: 100px;
+overflow: hidden;
+border-radius: 5px;
+margin-right: 10px;
+margin-bottom: 10px;
+}
+.friendIthem{
+  margin-bottom: 10px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.friendIthem .image{
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+.friendIthem .friendName{
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  color: black;
+}
+.rightbarGallery .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: all 0.4s ease-out;
+  cursor: pointer;
+}
+.rightbarGallery .image img:hover{
+  transform: scale(1.2);
+}
+.rightbarFollowBtn{
+  background-color: var(--primaryColor);
+  color: white;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  box-shadow:none;
+  transition: all 0.3s ease;
+}
+.rightbarFollowBtn:focus{
+  box-shadow:0 0 8px var(--primaryColor);
+}
+.rightbarFollowBtn i{
+  /* font-weight: light; */
+  margin-left: 5px;
+  font-size: 17px;
+  text-shadow:1px 1px 3px black;
+}
+/* !profileRightbar */
+/* !profile  */
+
+
+/* 1:10:4 */
+/* 1:22:47 12 min*/ 
+/* 1:29:03 7 min */
+
+/* 1:40:39 11 min */
+/* 30 min -> 3 heures */
+/* ______________________________________________ */
+/* 1:43:22   */
+/* 1:55:03  12 min */
+/* ______________________________________________ */
+/* 1:57:53   min */
+/* 2:14:01   17min */
+
+
+/* !homeContainer */
+
+/* login */
+.login{
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginWrapper{
+  width: 70%;
+  height: 70%;
+  display: flex;
+}
+.loginLeft,
+.loginRight{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.loginLogo{
+  font-size: 50px;
+  color: var(--primaryColor);
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+.loginDesc{
+  font-size: 24px;
+}
+.loginBox{
+  height: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.loginInput{
+  height: 50px;
+  border-radius: 10px;
+  border:1px solid gray ;
+  padding-left: 20px;
+  font-size: 18px;
+  box-shadow: none;
+  transition: all .4s ease-out;
+}
+.loginInput:focus{
+  border: none;
+  box-shadow: 0 0 5px  var(--primaryColor);
+}
+.loginButton{
+  background-color: var(--primaryColor);
+  height: 50px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+}
+.loginButton:disabled{
+  cursor: not-allowed;
+}
+.loginForgot{
+  color: var(--primaryColor);
+  cursor: pointer;
+  text-align: center;
+}
+.login .register {
+  display: flex;
+  justify-content: center;
+}
+.login .register .registerbtn{
+  color: var(--primaryColor);
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+/* !login */
+
+/* register */
+.register .loginBox{
+  height: 400px;
+}
+/* .register .loginInput{
+  margin-bottom: 10px;
+} */
+/* !register */
+/* 00:05:40 */
+/* 00:15:26  10 min */
+/* 00:22:26  7 min */
+
+/* responsivity */
+/* 1280 BIEN  */
+/* 1024 bien  */
+/* 1237px */
+@media (max-width:930px){
+  
+  .topbarLeft{
+    display: flex;
+    align-items: center;
+  }
+  .controlerSidbar{
+    width: 30px;
+    height: 18px;
+    position: relative;
+  }
+  .controlerSidbar .center{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+  }
+  .controlerSidbar .side::before{
+    content: "";
+    width: 100%;
+    height: 2.5px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+  }
+  .controlerSidbar .side::after{
+    content: "";
+    width: 100%;
+    height: 2.5px;
+    background-color: black;
+    position: absolute;
+    top: 100%;
+  }
+  .logo{
+font-size: 20px;
+margin-left: 10px;
+/* m: 10px; */
+  }
+  .sidebar{
+    background-color: var(--primaryColor);
+    position: fixed;
+    width: 50px;
+    transition: width .5s cubic-bezier(1, 0.85, 0.35, 1.32);
+  }
+  .sidebarBtn{
+    display: none;
+  }
+  .sidebarHr{
+    color: white;
+  }
+  .sidebarListItem{
+    justify-content: center;
+  }
+  .sidebarListItem i{
+    margin-right: 0px;
+    font-size: 18px;
+  }
+  .sidebarListItem .text{
+    display: none;
+  }
+  .sidebarControllerInput:checked + .sidebar{
+  width: 200px;
+  }
+  .sidebarControllerInput:checked + .sidebar .sidebarListItem{
+    justify-content: flex-start;
+  }
+  .sidebarControllerInput:checked + .sidebar .sidebarListItem .text{
+    display: block;
+    margin-left: 20px;
+  }
+  .feed{
+    flex: 8;
+    margin-left: 50px;
+    }
+    .rightbar{
+      flex: 4;
+    }
+
+
+}
+
+@media (max-width:768px){
+  .homeContainer{
+    display: block;
+    position: relative;
+  }
+  .rightbarController{
+    display: block;
+  }
+  .rightbar{
+    position: fixed;
+    right: -340%;
+    top: 50px;
+    background: #100d0d;
+    color: white;
+    padding-left: 20px;
+    transition: all .4s cubic-bezier(1, 0.84, 0.44, 1);
+  }
+  .rightbarControllerInput:checked + .rightbar{
+    right: 0;
+}
+.profileRightTop{
+  margin-left: 50px;
+}
+
+
+}
+@media (max-width:625px){
+  .topbarIconItem{
+    margin-right: 12px;
+  }
+  .topbarIconItem i{
+    font-size: 13px;
+  }
+.controlerSidbar{
+  width: 15px;
+  height: 9px;
+}
+.logo{
+  font-size: 15px;
+}
+  .shareOptions{
+    flex-wrap: wrap;
+  }
+  .shareOptions .shareOption{
+    margin-bottom: 10px;
+  }
+  .shareBottom{
+    flex-direction: column;
+  }
+  .topbarCenter{
+    flex:1;
+  }
+  .searchbar{
+    width: 27px;
+    height: 27px;
+    justify-content: center;
+  }
+  .searchInput{
+    width: 0;
+    margin-right: 0;
+  }
+.searchbarControllerInput:checked + .topbarContainer .topbarCenter{
+  flex:4;
+}
+.searchbarControllerInput:checked + .topbarContainer .topbarCenter .searchbar{
+  width: 100%;
+  margin-right: 8px;
+}
+ .searchbarControllerInput:checked + .topbarContainer .topbarCenter .searchInput{
+  width: calc(100% - 20px);
+}
+.searchbarControllerInput:checked + .topbarContainer .topbarLeft{
+  display: none;
+}
+
+}
+/* !responsivity */
